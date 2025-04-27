@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    background: #f8f8f8;
+    
+}
+
+.container{
+  position: relative;
+  height: 95.5vh;
+  width: 100%;
+  background-image: url("home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+  display: inline-block;
+}
+
+.quote{
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  font-size: 45px;
+  color:red;
+  font-size: 4em;
+
+}
+
+#but1{
+  position: absolute;
+  left: 64%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  
+}
+#but2{
+  position: absolute;
+  left: 62%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+#layout-header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  background:#39576f;
+  color: white;
+  box-shadow: 1px 1px 1px 1px lightgrey; }
+  #layout-header nav .mini-logo p {
+    margin: 5px;
+    font-size: 1.4rem;
+    font-weight: bold; }
+  #layout-header nav .auth-links ul {
+    margin: 5% 5px;
+    display: flex;
+    list-style-type: none; }
+    #layout-header nav .auth-links ul li {
+      margin-right: 10px; }
+  #layout-header nav a {
+    color: white;
+    text-decoration: none; }
+
+
+    
+    
+    .link_wrapper{
+      position: relative;
+    }
+    
+    a{
+      display: block;
+      width: 160px;
+      height: 50px;
+      line-height: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      background:#89675a99;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 3px solid #333;
+      transition: all .35s;
+      border-radius: 1em;
+    }
+    
+    .icon{
+      width: 50px;
+      height: 50px;
+      border: 3px solid transparent;
+      position: absolute;
+      transform: rotate(45deg);
+      right: 0;
+      top: 0;
+      z-index: -1;
+      transition: all .35s;
+    }
+    
+    .icon svg{
+      width: 30px;
+      position: absolute;
+      top: calc(50% - 15px);
+      left: calc(50% - 15px);
+      transform: rotate(-45deg);
+      fill: #12199e;
+      transition: all .35s;
+    }
+    
+    a:hover{
+      width: 200px;
+      border: 3px solid #dbe5df;
+      background: transparent;
+      color: #821fce;
+    }
+    
+    

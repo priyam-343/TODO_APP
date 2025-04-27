@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/css/todohome.css">
+<div class="box">
+       
+    <div class="part1">
+        <span id="name"><%=locals.user.name%></span>
+        <a id="signout" href="/users/signout">Sign Out</a>
+        <div class="f1">TODO APP</div>
+       <form action="/users/addtask" method="post"> <div class="f2">
+        <label for="f2" id="f2l">Description</label>
+        <input type="text" id="f2" name="description" required></div>
+
+
+        <div class="f3"><label for="f3" id="f3l">Category</label>
+           <!-- <input type="text" id="f3">-->
+            <select name="category" id="f3">
+                <option value="Personal">Personal</option>
+                <option value="Web development">Web development</option>
+                <option value="DSA">DSA</option>
+                <option value="Academics">Academics</option>
+                <option value="Family">Family</option>
+                <option value="CP">CP</option>
+                <option value="Other">Other</option>
+                
+
+
+
+
+            </select>
+        
+        <span class="count">active&nbsp;task:<%=locals.user.tasks.length%></span>
+        
+        
+        </div>
+        <div class="f4">
+            <label for="f4" id="f4l">DueDate</label>
+            <input type="date" id="f4" name="dueDate" required>
+        </div>
+        <div class="f5"><input type="submit" value="ADD TASK" id="add"></div></form>
+    </div>
+    <hr>
+
+    <div class="part2">
+        <ul id="list">
+           <!--  <li>
+              <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
+              <label for="task1">Buy groceries</br>&emsp;&emsp;&ensp;<span>11-11-202 &ensp; category</span></label>
+            
+              <a href=""><img src="delete.png" class="delete" data-id="12" /></a>
+            </li> -->
+
+           <%for(task of tasks){%>
+                <li>
+                <input type="checkbox" id="<%=task._id%>" class="custom-checkbox"  <%if(task.checked){%>checked<%}%>>
+                <label for="<%=task._id%>"><%=task.description%></br>&emsp;&emsp;&ensp;<span><%=task.dueDate.toDateString()%>&ensp;|&nbsp;<%=task.category%></span></label>
+                <a href="/users/delete_task/?taskid=<%=task._id%>"><img src="/images/delete.png" class="delete" data-id="12" /></a>
+            </li>
+                <%}%>
+          
+         
+          </ul>
+    </div>
+
+</div>
+
+<script src="/javascript/checkbox.js"></script>
